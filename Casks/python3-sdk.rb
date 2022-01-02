@@ -19,6 +19,6 @@ cask 'python3-sdk' do
     "org.python.Python.PythonFramework-#{version}",
     "org.python.Python.PythonDocumentation-#{version}",
     "org.python.Python.PythonApplications-#{version}",
-    "org.python.Python.PythonUnixTools-#{version}"'
+    "org.python.Python.PythonUnixTools-#{version}"
   ]
 end
