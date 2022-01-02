@@ -10,7 +10,7 @@ cask 'rustup' do
                       executable: "#{staged_path}/rustup-init.sh",
                       args: ['-y', '--no-modify-path']
                     }
-  
+
   uninstall script: {
                       executable: "#{File.expand_path('~/.cargo/bin/rustup')}",
                       args: ['self', 'uninstall', '-y'],
