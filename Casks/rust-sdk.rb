@@ -1,4 +1,4 @@
-cask 'rustup' do
+cask 'rust-sdk' do
   version :latest
   sha256 :no_check
 
