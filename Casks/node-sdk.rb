@@ -1,4 +1,4 @@
-cask 'node-installer' do
+cask 'node-sdk' do
   version '17.3.0'
   sha256 'f960b616eace93d171a0d15e67c62116aa3c6100eb6266046774cc478487b9d9'
 
