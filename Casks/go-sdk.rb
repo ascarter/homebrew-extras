@@ -1,10 +1,10 @@
 cask 'go-sdk' do
-  version '1.18.3'
+  version '1.18.4'
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
   if Hardware::CPU.intel?
-    sha256 'a23a24c5528671d444328a36a98056902f699a5a211b6ad5db29ca0c012e0085'
+    sha256 'ed5093acc099dfc4ab14cb5d5bc51d9f6694240d5eed25942f0d85f9995ba3f8'
   else
-    sha256 '0b1683bdb449b82d8476a8d13cdc0f41a5c1bc3d1c85d37852909e5b3f3bbd81'
+    sha256 '7f7726eae9c295cc148ae33457cf650c6b088ead027229e5256a312919187f88'
   end
 
   url "https://go.dev/dl/go#{version}.darwin-#{arch}.pkg"
