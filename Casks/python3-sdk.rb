@@ -1,6 +1,6 @@
 cask 'python3-sdk' do
-  version '3.10.5'
-  sha256 '36ff0f2ef1fdd8603042576d206224a76db32a0000e8332877751f86d98abc53'
+  version '3.10.6'
+  sha256 '6c62760332dcadffae3c2d84e602a19eddd37ae405c4151caa5aa3a94f61c0e5'
 
   url "https://www.python.org/ftp/python/#{version}/python-#{version}-macos11.pkg"
   name 'Python Programming Language'
