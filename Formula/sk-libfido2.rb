@@ -62,19 +62,20 @@ class SkLibfido2 < Formula
 
   test do
     # Test that the library exists and is a proper shared library
-    assert_predicate lib/"sk-libfido2.#{shared_library_extension}", :exist?
+    assert_path_exists lib/"sk-libfido2.#{shared_library_extension}"
 
     if OS.mac?
       assert_match "Mach-O", shell_output("file #{lib}/sk-libfido2.dylib")
       # Test symlink exists on macOS
-      assert_predicate lib/"sk-libfido2.so", :exist?
+      assert_path_exists lib/"sk-libfido2.so"
     else
       assert_match "ELF", shell_output("file #{lib}/sk-libfido2.so")
     end
 
     # Test that required symbols are exported (use nm or objdump depending on platform)
     nm_cmd = OS.mac? ? "nm" : "nm -D"
-    output = shell_output("#{nm_cmd} #{lib}/sk-libfido2.#{shared_library_extension} 2>/dev/null || nm #{lib}/sk-libfido2.#{shared_library_extension}")
+    output = shell_output("#{nm_cmd} #{lib}/sk-libfido2.#{shared_library_extension} 2>/dev/null || " \
+                          "nm #{lib}/sk-libfido2.#{shared_library_extension}")
 
     %w[sk_api_version sk_enroll sk_sign sk_load_resident_keys].each do |symbol|
       assert_match symbol, output, "Required symbol #{symbol} not found in library"
