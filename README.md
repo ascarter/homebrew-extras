@@ -1,4 +1,6 @@
-# Ascarter Extras
+# Homebrew Extras
+
+These are some extra Homebrew formulae that I maintain.
 
 ## How do I install these formulae?
 
