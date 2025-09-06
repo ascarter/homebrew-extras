@@ -1,13 +1,19 @@
 cask "fedora-media-writer-nosign" do
-  arch arm: "-arm64", intel: ""
-
   version "5.2.8"
   sha256 arm:   "06e4762a52358c5e3f382539b1e29cc838381b3a4ad7ec8995f2cbba7cfbf396",
          intel: "5bcfa5c302133aa97b941d1a7b569f321febc3af0693bbc2b8ee55c582f8a5e2"
 
-  url "https://github.com/FedoraQt/MediaWriter/releases/download/#{version}/" \
-      "FedoraMediaWriter-osx#{arch}-#{version}.dmg",
-      verified: "github.com/FedoraQt/MediaWriter/"
+  on_arm do
+    url "https://github.com/FedoraQt/MediaWriter/releases/download/#{version}/" \
+        "FedoraMediaWriter-osx-arm64-#{version}.dmg",
+        verified: "github.com/FedoraQt/MediaWriter/"
+  end
+  on_intel do
+    url "https://github.com/FedoraQt/MediaWriter/releases/download/#{version}/" \
+        "FedoraMediaWriter-osx-#{version}.dmg",
+        verified: "github.com/FedoraQt/MediaWriter/"
+  end
+
   name "Fedora Media Writer"
   desc "Write Fedora images to portable media. Unsigned version"
   homepage "https://docs.fedoraproject.org/en-US/quick-docs/creating-and-using-a-live-installation-image/"
