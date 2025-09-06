@@ -5,7 +5,6 @@ cask "fedora-media-writer-nosign" do
   url "https://github.com/FedoraQt/MediaWriter/releases/download/#{version}/" \
       "FedoraMediaWriter-osx-arm64-#{version}.dmg",
       verified: "github.com/FedoraQt/MediaWriter/"
-
   name "Fedora Media Writer"
   desc "Write Fedora images to portable media. Unsigned version"
   homepage "https://docs.fedoraproject.org/en-US/quick-docs/creating-and-using-a-live-installation-image/"
