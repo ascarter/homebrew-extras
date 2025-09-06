@@ -1,5 +1,5 @@
 cask "fedora-media-writer-nosign" do
-  arch arm: "-arm64"
+  arch arm: "-arm64", intel: ""
 
   version "5.2.8"
   sha256 arm:   "06e4762a52358c5e3f382539b1e29cc838381b3a4ad7ec8995f2cbba7cfbf396",
