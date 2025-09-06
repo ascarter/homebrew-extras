@@ -5,10 +5,11 @@ cask "fedora-media-writer-nosign" do
   sha256 arm:   "06e4762a52358c5e3f382539b1e29cc838381b3a4ad7ec8995f2cbba7cfbf396",
          intel: "5bcfa5c302133aa97b941d1a7b569f321febc3af0693bbc2b8ee55c582f8a5e2"
 
-  url "https://github.com/FedoraQt/MediaWriter/releases/download/#{version}/FedoraMediaWriter-osx#{arch}-#{version}.dmg",
+  url "https://github.com/FedoraQt/MediaWriter/releases/download/#{version}/" \
+      "FedoraMediaWriter-osx#{arch}-#{version}.dmg",
       verified: "github.com/FedoraQt/MediaWriter/"
   name "Fedora Media Writer"
-  desc "Tool to write Fedora images to portable media files. This version is unsigned with Gatekeeper checks disabled."
+  desc "Write Fedora images to portable media. Unsigned version"
   homepage "https://docs.fedoraproject.org/en-US/quick-docs/creating-and-using-a-live-installation-image/"
 
   livecheck do
