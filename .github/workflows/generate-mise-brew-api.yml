@@ -33,7 +33,7 @@ jobs:
 
       - name: Generate API metadata
         run: |
-          brew tap --custom-remote ascarter/extras "$GITHUB_WORKSPACE"
+          brew tap ascarter/extras
           brew trust --tap ascarter/extras
           brew ruby script/generate-mise-brew-api.rb
 
