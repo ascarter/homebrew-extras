@@ -54,4 +54,4 @@ jobs:
         if: always()
         run: |
           brew untap --force ascarter/extras || true
-          brew tap --custom-remote ascarter/extras "$GITHUB_WORKSPACE"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository ascarter/extras)"
