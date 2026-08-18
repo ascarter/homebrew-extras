@@ -14,7 +14,7 @@ cask "fedora-media-writer-nosign" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: :big_sur
   depends_on arch: :arm64
 
   app "FedoraMediaWriter.app"
