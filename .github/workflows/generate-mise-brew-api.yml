@@ -49,3 +49,9 @@ jobs:
           git add api
           git commit -m "chore(api): regenerate mise Homebrew metadata"
           git push origin HEAD:main
+
+      - name: Restore Homebrew tap link
+        if: always()
+        run: |
+          brew untap --force ascarter/extras || true
+          brew tap --custom-remote ascarter/extras "$GITHUB_WORKSPACE"
