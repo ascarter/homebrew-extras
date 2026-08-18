@@ -86,7 +86,7 @@
   "disable_replacement_formula": null,
   "disable_replacement_cask": null,
   "disable_args": null,
-  "tap_git_head": "37981f40abb9ceeef77e6f1d1644ff8291d050a6",
+  "tap_git_head": "f742747536fae56bdbd782d4f0c8f8e71ad99264",
   "languages": [],
   "ruby_source_path": "Casks/apple-container.rb",
   "ruby_source_checksum": {
