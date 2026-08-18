@@ -1,0 +1,95 @@
+{
+  "token": "fedora-media-writer-nosign",
+  "full_token": "ascarter/extras/fedora-media-writer-nosign",
+  "old_tokens": [],
+  "tap": "ascarter/extras",
+  "name": [
+    "Fedora Media Writer"
+  ],
+  "desc": "Write Fedora images to portable media. Unsigned version",
+  "homepage": "https://docs.fedoraproject.org/en-US/quick-docs/creating-and-using-a-live-installation-image/",
+  "url": "https://github.com/FedoraQt/MediaWriter/releases/download/5.2.8/FedoraMediaWriter-osx-arm64-5.2.8.dmg",
+  "url_specs": {
+    "verified": "github.com/FedoraQt/MediaWriter/"
+  },
+  "version": "5.2.8",
+  "autobump": true,
+  "no_autobump_message": null,
+  "skip_livecheck": false,
+  "installed": null,
+  "installed_time": null,
+  "bundle_version": null,
+  "bundle_short_version": null,
+  "pinned": false,
+  "pinned_version": null,
+  "outdated": false,
+  "sha256": "06e4762a52358c5e3f382539b1e29cc838381b3a4ad7ec8995f2cbba7cfbf396",
+  "artifacts": [
+    {
+      "app": [
+        "FedoraMediaWriter.app"
+      ],
+      "target": "/Applications/FedoraMediaWriter.app"
+    },
+    {
+      "postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/fedoraproject.org",
+            "~/Library/Saved Application State/org.fedoraproject.MediaWriter.savedState"
+          ]
+        }
+      ]
+    }
+  ],
+  "caveats": null,
+  "caveats_rosetta": null,
+  "depends_on": {
+    "macos": {
+      ">=": [
+        "11"
+      ]
+    },
+    "arch": [
+      {
+        "type": "arm",
+        "bits": 64
+      }
+    ]
+  },
+  "conflicts_with": null,
+  "container": null,
+  "rename": [],
+  "auto_updates": null,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "deprecation_replacement_formula": null,
+  "deprecation_replacement_cask": null,
+  "deprecate_args": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
+  "disable_replacement_formula": null,
+  "disable_replacement_cask": null,
+  "disable_args": null,
+  "tap_git_head": "2c91bb24cdbbe6a1124bea67033a5e41f1eb1f0d",
+  "languages": [],
+  "ruby_source_path": "Casks/fedora-media-writer-nosign.rb",
+  "ruby_source_checksum": {
+    "sha256": "41e358d608055f3ba275de75c1b77389511d054853a37b08af8dee708ff5efe3"
+  },
+  "variations": {},
+  "supported_platforms": [
+    "arm64_golden_gate",
+    "arm64_tahoe",
+    "arm64_sequoia",
+    "arm64_sonoma",
+    "arm64_ventura",
+    "arm64_monterey",
+    "arm64_big_sur"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "name": "sk-libfido2",
+  "full_name": "ascarter/extras/sk-libfido2",
+  "tap": "ascarter/extras",
+  "oldnames": [],
+  "aliases": [],
+  "versioned_formulae": [],
+  "desc": "Standalone security key library for OpenSSH YubiKey SSH resident keys",
+  "license": "SSH-OpenSSH",
+  "homepage": "https://www.openssh.com/",
+  "versions": {
+    "stable": "10.0p2",
+    "head": null,
+    "bottle": false
+  },
+  "urls": {
+    "stable": {
+      "url": "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.0p2.tar.gz",
+      "tag": null,
+      "revision": null,
+      "using": null,
+      "checksum": "021a2e709a0edf4250b1256bd5a9e500411a90dddabea830ed59cef90eb9d85c"
+    }
+  },
+  "patches": [],
+  "revision": 0,
+  "version_scheme": 0,
+  "compatibility_version": null,
+  "autobump": true,
+  "no_autobump_message": null,
+  "skip_livecheck": false,
+  "bottle": {},
+  "pour_bottle_only_if": null,
+  "keg_only": false,
+  "keg_only_reason": null,
+  "options": [],
+  "build_dependencies": [
+    "pkgconf"
+  ],
+  "dependencies": [
+    "libfido2",
+    "openssl@3"
+  ],
+  "test_dependencies": [],
+  "recommended_dependencies": [],
+  "optional_dependencies": [],
+  "uses_from_macos": [
+    "zlib"
+  ],
+  "uses_from_macos_bounds": [
+    {}
+  ],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
+  "caveats": "This formula installs only the standalone security key library for OpenSSH.\n\nTo use YubiKey SSH resident keys with OpenSSH, you need:\n1. OpenSSH 8.2+ (install via 'brew install openssh' if needed)\n2. This library installed at: $HOMEBREW_CELLAR/sk-libfido2/10.0p2/lib/sk-libfido2.dylib\n3. Set the SSH_SK_PROVIDER environment variable\n\nAdd this to your shell profile (~/.zshrc, ~/.bashrc, etc.):\n  export SSH_SK_PROVIDER=$HOMEBREW_CELLAR/sk-libfido2/10.0p2/lib/sk-libfido2.dylib\n\nAlternately, set provider in ~/.ssh/config:\n  SecurityKeyProvider $HOMEBREW_CELLAR/sk-libfido2/10.0p2/lib/sk-libfido2.dylib\n\nThe library will be automatically discovered by OpenSSH's ssh-keygen and\nssh-add commands when generating or using FIDO2/U2F keys.\n\nTo generate a resident key:\n  ssh-keygen -t ecdsa-sk -O resident -f ~/.ssh/id_ecdsa_sk\n\nTo load resident keys from your YubiKey:\n  ssh-add -K\n",
+  "installed": [],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "deprecation_replacement_formula": null,
+  "deprecation_replacement_cask": null,
+  "deprecate_args": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
+  "disable_replacement_formula": null,
+  "disable_replacement_cask": null,
+  "disable_args": null,
+  "post_install_steps": [],
+  "post_install_defined": false,
+  "service": null,
+  "tap_git_head": "2c91bb24cdbbe6a1124bea67033a5e41f1eb1f0d",
+  "ruby_source_path": "Formula/sk-libfido2.rb",
+  "ruby_source_checksum": {
+    "sha256": "fa75458ea634db06a05c484b617a4aa2fdf8d21a20e386052d27c2d49e16407e"
+  },
+  "variations": {}
+}

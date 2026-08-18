@@ -1,0 +1,99 @@
+{
+  "token": "apple-container",
+  "full_token": "ascarter/extras/apple-container",
+  "old_tokens": [],
+  "tap": "ascarter/extras",
+  "name": [
+    "Container"
+  ],
+  "desc": "Create and run Linux containers in lightweight virtual machines",
+  "homepage": "https://github.com/apple/container",
+  "url": "https://github.com/apple/container/releases/download/1.2.2/container-1.2.2-installer-signed.pkg",
+  "url_specs": {
+    "verified": "github.com/apple/container/"
+  },
+  "version": "1.2.2",
+  "autobump": true,
+  "no_autobump_message": null,
+  "skip_livecheck": false,
+  "installed": null,
+  "installed_time": null,
+  "bundle_version": null,
+  "bundle_short_version": null,
+  "pinned": false,
+  "pinned_version": null,
+  "outdated": false,
+  "sha256": "f4c7e73f7203725a3512676dfd9ec6c6a98a37093b6fd4a1b0fdcfcb227e2118",
+  "artifacts": [
+    {
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/usr/local/bin/uninstall-container.sh",
+            "args": [
+              "-k"
+            ],
+            "sudo": true
+          }
+        }
+      ]
+    },
+    {
+      "pkg": [
+        "container-1.2.2-installer-signed.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.container",
+            "~/Library/Preferences/com.apple.container.defaults.plist"
+          ]
+        }
+      ]
+    }
+  ],
+  "caveats": null,
+  "caveats_rosetta": null,
+  "depends_on": {
+    "macos": {
+      ">=": [
+        "26"
+      ]
+    },
+    "arch": [
+      {
+        "type": "arm",
+        "bits": 64
+      }
+    ]
+  },
+  "conflicts_with": null,
+  "container": null,
+  "rename": [],
+  "auto_updates": null,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "deprecation_replacement_formula": null,
+  "deprecation_replacement_cask": null,
+  "deprecate_args": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
+  "disable_replacement_formula": null,
+  "disable_replacement_cask": null,
+  "disable_args": null,
+  "tap_git_head": "2c91bb24cdbbe6a1124bea67033a5e41f1eb1f0d",
+  "languages": [],
+  "ruby_source_path": "Casks/apple-container.rb",
+  "ruby_source_checksum": {
+    "sha256": "7f422231828af934ca7df62483c15a8bfd60034a3a68d50fb06c1af7f28585d1"
+  },
+  "variations": {},
+  "supported_platforms": [
+    "arm64_golden_gate",
+    "arm64_tahoe"
+  ]
+}
