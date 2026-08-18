@@ -33,9 +33,9 @@ jobs:
 
       - name: Generate API metadata
         run: |
+          brew untap --force ascarter/extras || true
           brew tap ascarter/extras
           brew trust --tap ascarter/extras
-          brew update
           brew ruby script/generate-mise-brew-api.rb
 
       - name: Commit generated metadata
