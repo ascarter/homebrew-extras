@@ -39,7 +39,7 @@ jobs:
 
       - name: Commit generated metadata
         run: |
-          if git diff --quiet -- api; then
+          if [ -z "$(git status --porcelain -- api)" ]; then
             exit 0
           fi
 
