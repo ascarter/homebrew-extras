@@ -34,7 +34,8 @@
               "-k"
             ],
             "sudo": true
-          }
+          },
+          "pkgutil": "com.apple.container-installer"
         }
       ]
     },
@@ -85,11 +86,11 @@
   "disable_replacement_formula": null,
   "disable_replacement_cask": null,
   "disable_args": null,
-  "tap_git_head": "2c91bb24cdbbe6a1124bea67033a5e41f1eb1f0d",
+  "tap_git_head": "b475bd0848e64d9819042811a6b9a641f6225a9e",
   "languages": [],
   "ruby_source_path": "Casks/apple-container.rb",
   "ruby_source_checksum": {
-    "sha256": "7f422231828af934ca7df62483c15a8bfd60034a3a68d50fb06c1af7f28585d1"
+    "sha256": "f73181a73b28c87ab3ffcd10ff331860579da612d0d989165dba162dcbc6e7a2"
   },
   "variations": {},
   "supported_platforms": [
