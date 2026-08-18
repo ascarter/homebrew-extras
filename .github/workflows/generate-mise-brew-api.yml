@@ -54,4 +54,6 @@ jobs:
         if: always()
         run: |
           brew untap --force ascarter/extras || true
-          ln -s "$GITHUB_WORKSPACE" "$(brew --repository ascarter/extras)"
+          tap_path="$(brew --repository ascarter/extras)"
+          mkdir -p "$(dirname "$tap_path")"
+          ln -s "$GITHUB_WORKSPACE" "$tap_path"
