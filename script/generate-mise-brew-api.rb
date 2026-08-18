@@ -24,8 +24,8 @@ Homebrew.with_no_api_env do
   FileUtils.mkdir_p([formula_directory, cask_directory])
 
   generated_formulae = []
-  tap.formula_names.sort.each do |name|
-    formula = Formulary.factory("#{TAP_NAME}/#{name}")
+  tap.formula_files.sort.each do |path|
+    formula = Formulary.factory(path)
     generated_formulae << formula.name
     (formula_directory / "#{formula.name}.json").write("#{JSON.pretty_generate(formula.to_hash_with_variations)}\n")
   end
