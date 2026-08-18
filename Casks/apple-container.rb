@@ -23,7 +23,8 @@ cask "apple-container" do
     executable: "/usr/local/bin/uninstall-container.sh",
     args:       ["-k"],
     sudo:       true,
-  }
+  },
+            pkgutil: "com.apple.container-installer"
 
   zap trash: [
     "~/Library/Application Support/com.apple.container",
