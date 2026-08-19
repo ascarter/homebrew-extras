@@ -34,7 +34,9 @@ Homebrew.with_no_api_env do
   tap.cask_files.sort.each do |path|
     cask = Cask::CaskLoader.load(path)
     generated_casks << cask.token
-    (cask_directory / "#{cask.token}.json").write("#{JSON.pretty_generate(cask.to_hash_with_variations)}\n")
+    metadata = cask.to_hash_with_variations
+    metadata["auto_updates"] = false if metadata["auto_updates"].nil?
+    (cask_directory / "#{cask.token}.json").write("#{JSON.pretty_generate(metadata)}\n")
   end
 
   Dir.glob(formula_directory / "*.json").each do |path|
